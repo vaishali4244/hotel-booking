@@ -1,0 +1,141 @@
+.dashboard-container {
+  height: auto;
+  width: 98.79vw;
+  box-sizing: border-box;
+  padding-top: 6rem;
+  background: url(../images/wall2.jpg) repeat fixed center;
+}
+
+.header {
+  height: 5rem;
+  width: 98.79vw;
+  background: #49298a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+}
+
+.user-info {
+  width: 20vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.user-info svg {
+  background: white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-detail {
+  height: 4rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.p-email {
+  margin: 0;
+  color: rgb(240, 240, 171);
+}
+
+.hotel-name {
+  width: 30vw;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotel-name h1 {
+  letter-spacing: 0.2rem;
+  font-size: 2.2rem;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+}
+.hotel-name h1:visited {
+  text-decoration: none;
+}
+
+.hotel-name p {
+  color: #fe464b;
+  margin: 0;
+}
+
+.hotel-name span {
+  color: rgb(240, 240, 171);
+  margin: 0;
+  font-weight: 500;
+}
+
+.cart-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 5rem;
+  width: 15vw;
+  position: relative;
+  right: 10px;
+}
+
+.cart-img {
+  background: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cart-icon {
+  height: 1.3rem;
+  width: 1.6rem;
+}
+
+.cart-count {
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 1px solid #fe464b;
+  background: #fe464b;
+  color: #15053d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  position: relative;
+  right: 28px;
+  bottom: 23px;
+  font-weight: bold;
+}
+
+.cart-amount {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  position: relative;
+  right: 40px;
+}
+
+img {
+  height: 40vh;
+  width: 40vw;
+}
