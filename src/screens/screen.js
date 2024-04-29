@@ -1,14 +1,10 @@
-
 import { Link } from "react-router-dom";
 
 const Screen = () => {
-
-
-
   return (
     <div className="main-container">
-      <h2 >Welcome to BookHotels</h2>
-      <p className="main-p">Lorem ipsum dolor sit amet.</p> 
+      <h2>Welcome to BookHotels</h2>
+      <p className="main-p">Lorem ipsum dolor sit amet.</p>
       <p className="main-p">consectetur adipiscing elit.</p>
       <div className="main-btn">
         <Link to="/signup">
@@ -21,4 +17,5 @@ const Screen = () => {
     </div>
   );
 };
+
 export default Screen;

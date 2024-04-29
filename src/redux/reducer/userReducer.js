@@ -3,14 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 // Initial states constructed
 const initialState = {
   user: {
-    name:"",
-    phone:"",
+    name: "",
+    phone: "",
     email: "",
     password: "",
     agency: "",
-    companyName:""
+    companyName: "",
   },
-  // token: "poiu!852@lkj#951%mn",
   token: "",
 };
 
@@ -34,9 +33,5 @@ export const userDetail = createSlice({
   },
 });
 
-export const {
-  setUserData,
-  setToken,
-  setLogout,
-} = userDetail.actions;
+export const { setUserData, setToken, setLogout } = userDetail.actions;
 export default userDetail.reducer;

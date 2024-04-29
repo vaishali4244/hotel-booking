@@ -64,3 +64,27 @@
   cursor: pointer;
   margin-top: 5vh;
 }
+
+@media screen and (max-width: 1100px) {
+  .hotel-list {
+    height: auto;
+    margin: 3vh 3vw;
+    flex-direction: column;
+  }
+
+  .product-img {
+    height: 50vh;
+    width: 55vw;
+  }
+
+  .card-body {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .book-btn {
+    width: 70vw;
+    height: 3rem;
+  }
+}

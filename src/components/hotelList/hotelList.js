@@ -11,7 +11,6 @@ const HotelList = ({
   setProductCount,
   setIsLoading,
   setAddToCart,
-  addToCart,
 }) => {
   const navigate = useNavigate();
 

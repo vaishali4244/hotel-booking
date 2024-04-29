@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./checkout.css";
 
 const Checkout = ({ price }) => {
@@ -49,21 +49,19 @@ const Checkout = ({ price }) => {
               strokeLinejoin="round"
             />
           </svg>
-         
+
           <div className="user-detail">
             <p className="p-name">{user.name}</p>
             <p className="p-email">{user.email}</p>
           </div>
         </div>
         <div className="hotel-name">
-  
           <h1 onClick={HomeFunc}>BookHotels</h1>
-      
+
           <p>
             Location : <span>India</span>
           </p>
         </div>
-        
       </div>
       <form className="form-content">
         <label>
@@ -79,7 +77,9 @@ const Checkout = ({ price }) => {
           <input type="text" name="phone" value={user.phone} />
         </label>
 
-        <p className="final-price">Total Price: &#8377;<span>{price}</span></p>
+        <p className="final-price">
+          Total Price: &#8377;<span>{price}</span>
+        </p>
         <label>
           Payment Method:
           <select required>

@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import "./bookingCart.css";
 
 const BookingCart = ({ price, setPrice, setAddToCart, addToCart }) => {
-
   const data = useSelector((state) => state.userDetail);
   const { user } = data;
   const navigate = useNavigate();
@@ -24,7 +23,7 @@ const BookingCart = ({ price, setPrice, setAddToCart, addToCart }) => {
 
   return (
     <div className="cart-container">
-       <div className="header card-head">
+      <div className="header card-head">
         <div className="user-info">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -63,50 +62,46 @@ const BookingCart = ({ price, setPrice, setAddToCart, addToCart }) => {
             Location : <span>India</span>
           </p>
         </div>
-
-        
       </div>
       <div className="cart-content">
-
-    
-      <h2>Cart</h2>
-      <div className="cart-items">
-        {addToCart.length === 0 ? (
-          <p>Your cart is empty</p>
-        ) : (
-          <ul>
-            {addToCart.map((item, index) => (
-              <li key={index} className="cart-item">
-                <p className="cart-title">{item?.display}</p>
-                <p className="cart-city">
-                  {item?.metaData?.city}
-                  <span>, {item?.metaData?.state}</span>
-                </p>
-                <div >
-                  <p>Room : 1</p>
-                  <p className="product-price">
-                    &#8377;{item?.metaData?.price}
+        <h2>Cart</h2>
+        <div className="cart-items">
+          {addToCart.length === 0 ? (
+            <p>Your cart is empty</p>
+          ) : (
+            <ul>
+              {addToCart.map((item, index) => (
+                <li key={index} className="cart-item">
+                  <p className="cart-title">{item?.display}</p>
+                  <p className="cart-city">
+                    {item?.metaData?.city}
+                    <span>, {item?.metaData?.state}</span>
                   </p>
-                </div>
-                <button
-                  onClick={() => {
-                    removeFromCart(index);
-                  }}
-                  className="remove-btn"
-                >
-                  Remove
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
+                  <div>
+                    <p>Room : 1</p>
+                    <p className="product-price">
+                      &#8377;{item?.metaData?.price}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => {
+                      removeFromCart(index);
+                    }}
+                    className="remove-btn"
+                  >
+                    Remove
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <p className="total-cost">Total Cost: &#8377;{price}</p>
+        <button className="book-btn" onClick={() => checkoutFunc()}>
+          {" "}
+          Checkout Now
+        </button>
       </div>
-      <p className="total-cost">Total Cost: &#8377;{price}</p>
-      <button className="book-btn" onClick={() => checkoutFunc()}>
-        {" "}
-        Checkout Now
-      </button>
-    </div>
     </div>
   );
 };

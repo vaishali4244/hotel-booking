@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { hotelData } from "../components/hotelList/data.js";
-import "./dashboard.css";
 import HotelList from "../components/hotelList/hotelList.js";
 import SearchBar from "../components/searchBar/searchBar.js";
 import { useNavigate } from "react-router-dom";
+import "./dashboard.css";
 
 const Dashboard = ({
   hotelDetails,
@@ -34,15 +34,14 @@ const Dashboard = ({
       setHotelDetails(hotelData);
       setResetData(hotelData);
     } else {
-      // If search is not empty, filter the hotelData array based on the search term
-      const filteredData = hotelDetails.filter((item) => {
+      const filteredData = hotelData.filter((item) => {
         return item?.metaData?.city
           .toLowerCase()
           .includes(search.toLowerCase());
       });
       setHotelDetails(filteredData);
     }
-  }, [search, setResetData, hotelDetails, setHotelDetails]);
+  }, [search, setResetData, setHotelDetails]);
 
   const handleFilterByPrice = () => {
     // Filter initial data based on price range
@@ -137,34 +136,32 @@ const Dashboard = ({
         </div>
       </header>
 
-      <SearchBar search={search} setSearch={setSearch} />
       <div className="hotel-location">
         <p>List of Hotels</p>
       </div>
+      <div className="search-bar">
+        <SearchBar search={search} setSearch={setSearch} />
+      </div>
 
       <div className="price-section">
-        <label>
-          Price range:
-          <input
-            type="number"
-            value={minPrice}
-            step={50}
-            min={1000}
-            onChange={(e) => setMinPrice(e?.target?.value)}
-            placeholder={1000}
-          />
-        </label>
-        <label>
-          to
-          <input
-            type="number"
-            value={maxPrice}
-            min={parseInt(minPrice) + parseInt(1000)}
-            step={100}
-            onChange={(e) => setMaxPrice(e?.target?.value)}
-            placeholder={7000}
-          />
-        </label>
+        <label>Price range:</label>
+        <input
+          type="number"
+          value={minPrice}
+          step={50}
+          min={1000}
+          onChange={(e) => setMinPrice(e?.target?.value)}
+          placeholder={1000}
+        />
+        <label>to</label>
+        <input
+          type="number"
+          value={maxPrice}
+          min={parseInt(minPrice) + parseInt(1000)}
+          step={100}
+          onChange={(e) => setMaxPrice(e?.target?.value)}
+          placeholder={7000}
+        />
         <button onClick={handleFilterByPrice} disabled={isFilterApplied}>
           Apply
         </button>
