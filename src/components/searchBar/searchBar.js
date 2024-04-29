@@ -10,7 +10,6 @@ const SearchBar = ({ setSearch, search }) => {
         placeholder="product name"
         onChange={(e) => {
           setSearch(e.target.value);
-          console.log(search, "search");
         }}
         value={search}
         name="search"
