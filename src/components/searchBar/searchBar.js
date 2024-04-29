@@ -3,7 +3,7 @@ import "./searchBar.css";
 const SearchBar = ({ setSearch, search }) => {
   return (
     <div className="search">
-      <label htmlFor="search">Search by name:</label>
+      <label htmlFor="search">Search by City Name : </label>
       <input
         className=" search-input"
         type="search"

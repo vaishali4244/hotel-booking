@@ -63,87 +63,87 @@ span {
 
 .ip-1 {
   position: relative;
-  top: 26px;
+  top: 20px;
   left: 20px;
 }
 
 .ip-2 {
   position: relative;
-  top: 40px;
+  top: 36px;
   left: 20px;
 }
 
 .ip-3 {
   position: relative;
-  top: 54px;
+  top: 48px;
   left: 20px;
 }
 
 .ip-4 {
   position: relative;
-  top: 68px;
+  top: 62px;
   left: 20px;
 }
 
 .ip-5 {
   position: relative;
-  top: 82px;
+  top: 76px;
   left: 20px;
 }
 
 .ip-6 {
   position: relative;
-  top: 110px;
+  top: 104px;
   left: 20px;
   accent-color: #6c25ff;
 }
 
 .ip-7 {
   position: relative;
-  top: 56px;
+  top: 50px;
   left: 103px;
   accent-color: #6c25ff;
 }
 
 .lb-1 {
   position: relative;
-  top: 33px;
+  top: 27px;
   left: 34px;
 }
 
 .lb-2 {
   position: relative;
-  top: 47px;
+  top: 41px;
   left: 34px;
 }
 
 .lb-3 {
   position: relative;
-  top: 61px;
+  top: 55px;
   left: 34px;
 }
 
 .lb-4 {
   position: relative;
-  top: 75px;
+  top: 69px;
   left: 34px;
 }
 
 .lb-5 {
   position: relative;
-  top: 89px;
+  top: 83px;
   left: 34px;
 }
 
 .lb-6 {
   position: relative;
-  top: 100px;
+  top: 94px;
   left: 18px;
 }
 
 .ip-yes {
   position: relative;
-  top: 77px;
+  top: 71px;
   left: 56px;
   width: 23px;
   height: 17px;
@@ -156,7 +156,7 @@ span {
 
 .ip-no {
   position: relative;
-  top: 24px;
+  top: 18px;
   left: 140px;
   width: 23px;
   height: 17px;
@@ -174,12 +174,18 @@ span {
   width: 335px;
   height: 46px;
   position: relative;
-  top: 100px;
+  top: 50px;
   left: 20px;
   font-size: 1rem;
   font-weight: 600;
   color: white;
   cursor: pointer;
+}
+.popover-email {
+  position: relative;
+  top: 55px;
+  left: 20px;
+  width: 40vw;
 }
 
 .bg-img {
@@ -228,5 +234,9 @@ span {
   .signup-img {
     height: 40vh;
     width: 60vw;
+  }
+
+  .popover-email {
+    width: 80vw;
   }
 }

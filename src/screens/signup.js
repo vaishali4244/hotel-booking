@@ -77,11 +77,7 @@ const Signup = () => {
           placeholder="Enter name"
           ref={userNameRef}
         />
-        {submit && errorEmail && (
-          <div className="popover-email">
-            Please enter a valid email address.
-          </div>
-        )}
+
         <br />
         <label className="lb-2" for="phone">
           Phone number<span>*</span>{" "}
@@ -93,11 +89,6 @@ const Signup = () => {
           ref={phoneRef}
           name="phone"
         />
-        {submit && errorEmail && (
-          <div className="popover-email">
-            {/* Please enter a valid email address. */}
-          </div>
-        )}
 
         <br />
         <label className="lb-3">
@@ -109,7 +100,6 @@ const Signup = () => {
           placeholder="Enter email address"
           ref={emailRef}
         />
-        {submit && errorEmail && <div className="popover-email"></div>}
 
         <br />
         <label className="lb-4">
@@ -121,11 +111,7 @@ const Signup = () => {
           placeholder="Enter password"
           ref={passwordRef}
         />
-        {submit && errorPass && (
-          <div className="popover-pw">
-            Password must be at least 8 characters including a-z, A-Z and 0-9.
-          </div>
-        )}
+
         <br />
 
         <label className="lb-5">Company name </label>
@@ -167,6 +153,17 @@ const Signup = () => {
         >
           Create Account
         </button>
+        {!submit && errorEmail && errorPass && (
+          <div className="popover-email">
+            <p>
+              Fill all the required<span>*</span> details.
+            </p>
+            <p>
+              {" "}
+              Password must be at least 8 characters including a-z, A-Z and 0-9.
+            </p>
+          </div>
+        )}
       </div>
       <div className="bg-img">
         <img

@@ -8,6 +8,7 @@ const Login = () => {
   const { user } = useSelector((state) => state.userDetail);
 
   const [submit, setSubmit] = useState(false);
+  const [doLogin, setDoLogin] = useState(true);
 
   const logEmailRef = useRef("");
   const logPwRef = useRef("");
@@ -18,14 +19,18 @@ const Login = () => {
   useEffect(() => {
     if (submit) {
       if (
-        user.email === logEmailRef?.current?.value &&
-        user.password === logPwRef?.current?.value
+        user?.email === logEmailRef?.current?.value &&
+        user?.password === logPwRef?.current?.value &&
+        user?.email?.length !== 0 &&
+        user?.password?.length !== 0
       ) {
         dispatch(setToken("ertyujhfd852@hgdhgtj"));
         navigate("/hotels");
         setSubmit(false);
+        setDoLogin(true);
       } else {
         setSubmit(false);
+        setDoLogin(false);
       }
     }
   }, [submit, user.email, user.password, dispatch, navigate]);
@@ -50,16 +55,21 @@ const Login = () => {
           placeholder="Enter password"
           ref={logPwRef}
         />
-        {submit && <div className="popover-email"></div>}
         <br />
         <button
           className="login-click "
           onClick={() => {
             setSubmit(true);
+            setDoLogin(false);
           }}
         >
           Login
         </button>
+        {!submit && !doLogin && (
+          <div className="popover-login">
+            <p className="invalid-msg">Invalid credentials.</p>
+          </div>
+        )}
       </div>
       <div className="bg-img">
         <img

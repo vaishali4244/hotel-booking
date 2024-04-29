@@ -129,16 +129,6 @@
   font-size: 0.9rem;
 }
 
-.popover-pw {
-  position: absolute;
-  top: 435px;
-  left: 20px;
-  width: 333px;
-  color: rgba(255, 0, 0, 0.8);
-  font-weight: 400;
-  font-size: 0.9rem;
-}
-
 .bg-img {
   height: 95vh;
   width: 50vw;
@@ -149,6 +139,11 @@
   width: 50vw;
 }
 
+.login-content .popover-login .invalid-msg {
+  color: rgba(255, 0, 0, 0.8);
+  margin-top: 10vh;
+}
+
 @media screen and (max-width: 750px) {
   .login-container {
     height: auto;
@@ -157,7 +152,7 @@
   }
 
   .login-content {
-    height: 50vh;
+    min-height: 50vh;
     width: 90vw;
   }
 
